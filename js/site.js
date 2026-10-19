@@ -137,11 +137,8 @@
     var on = function () {
       var y = window.scrollY;
       var solid = y > 60;
-      if (!solid && h.classList.contains("solid") && h.classList.contains("hide")) {
-        h.classList.add("snap"); setTimeout(function () { h.classList.remove("snap"); }, 700); // вернулась к верху: без белой вспышки
-      }
       h.classList.toggle("solid", solid);
-      if (y > 60 && y < last - 4) h.classList.add("hide");          // вверх: шапка прячется
+      if (y > 60 && y < last - 1) h.classList.add("hide");          // вверх: шапка прячется
       else if (y > last + 4 || y <= 60) h.classList.remove("hide"); // вниз: показывается
       last = y; ticking = false;
     };
