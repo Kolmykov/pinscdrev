@@ -182,7 +182,7 @@ def index():
   </div></section>
 
 <section class="band mat" id="materials"><div class="w">{row('Материалы','06')}
-  <h2 class="mat__title rv"><span>Пять </span><img class="pill" src="img/mat-pill.jpg" alt=""><span>пород дерева, пять характеров</span></h2>
+  <h2 class="mat__title rv"><span>Пять </span><span class="pill pill--stripes" aria-hidden="true"><i style="background-image:url(img/mat-oak.jpg)"></i><i style="background-image:url(img/mat-beech.jpg)"></i><i style="background-image:url(img/mat-birch.jpg)"></i><i style="background-image:url(img/mat-pine.jpg)"></i><i style="background-image:url(img/mat-alder.jpg)"></i></span><span>пород дерева, пять характеров</span></h2>
   <div class="mlist">{mrows}</div>
   <p class="mat__note rv">Цвет дерева лучше увидеть вживую: образцы всех пород лежат <a href="#shop">в шоу-руме на ВДНХ {ic('arrow')}</a></p>
 </div></section>

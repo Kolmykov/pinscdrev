@@ -194,6 +194,9 @@ main{display:flex;flex-direction:column;gap:calc(60*var(--u))}
 .mat__title{margin-top:calc(60*var(--u));display:flex;align-items:center;font-size:calc(64*var(--u));font-weight:300;line-height:calc(87*var(--u));color:var(--walnut);white-space:nowrap}
 .mat__title>span:first-child{width:calc(144*var(--u))}
 .mat__title .pill{width:calc(110*var(--u));height:calc(70*var(--u));border-radius:calc(999*var(--u));object-fit:cover;align-self:flex-start;margin:calc(17*var(--u)) calc(4*var(--u)) 0}
+.pill--stripes{display:flex;overflow:hidden;flex:none}
+.pill--stripes i{flex:1;background-size:cover;background-position:center;transition:flex .5s var(--ease)}
+.pill--stripes:hover i:hover{flex:2.4}
 .mlist{margin-top:calc(52*var(--u));width:calc(1280*var(--u));max-width:100%;border-bottom:1px solid var(--line)}
 .mrow{display:grid;grid-template-columns:calc(518*var(--u)) 1fr calc(24*var(--u));align-items:center;padding:calc(20*var(--u)) 0;border-top:1px solid var(--line);transition:padding .4s var(--ease)}
 .mrow:hover{padding-left:calc(16*var(--u))}
