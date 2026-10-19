@@ -94,7 +94,7 @@ def head(title, cls=''):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap&subset=cyrillic" rel="stylesheet">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon.ico" sizes="48x48"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/site.css?v=20261019b">
 {ZOOM}
 </head><body class="{cls}">
 {ZOOM_BODY}
@@ -182,7 +182,7 @@ def index():
   </div></section>
 
 <section class="band mat" id="materials"><div class="w">{row('Материалы','06')}
-  <h2 class="mat__title rv"><span>Пять </span><span class="pill pill--stripes" aria-hidden="true"><i style="background-image:url(img/mat-oak.jpg)"></i><i style="background-image:url(img/mat-beech.jpg)"></i><i style="background-image:url(img/mat-birch.jpg)"></i><i style="background-image:url(img/mat-pine.jpg)"></i><i style="background-image:url(img/mat-alder.jpg)"></i></span><span>пород дерева, пять характеров</span></h2>
+  <h2 class="mat__title rv"><span>Пять </span><span class="pill pill--stripes" aria-hidden="true" style="display:flex;overflow:hidden;flex:none;width:calc(110*var(--u));height:calc(70*var(--u))"><i style="flex:1;background:url(img/mat-oak.jpg) center/cover"></i><i style="flex:1;background:url(img/mat-beech.jpg) center/cover"></i><i style="flex:1;background:url(img/mat-birch.jpg) center/cover"></i><i style="flex:1;background:url(img/mat-pine.jpg) center/cover"></i><i style="flex:1;background:url(img/mat-alder.jpg) center/cover"></i></span><span>пород дерева, пять характеров</span></h2>
   <div class="mlist">{mrows}</div>
   <p class="mat__note rv">Цвет дерева лучше увидеть вживую: образцы всех пород лежат <a href="#shop">в шоу-руме на ВДНХ {ic('arrow')}</a></p>
 </div></section>
