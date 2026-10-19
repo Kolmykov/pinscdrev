@@ -34,6 +34,7 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:1.5;stroke-lineca
 
 /* ===== шапка ===== */
 .hdr{position:fixed;top:0;left:0;right:0;z-index:60;color:var(--ink);transition:transform .55s var(--ease),background .35s,color .35s,box-shadow .35s}
+.hdr.hide{transform:translateY(-100%)}
 .hdr__row{display:flex;justify-content:space-between;align-items:center;height:calc(104*var(--u));padding:calc(30*var(--u)) 0;transition:height .35s,padding .35s}
 .hdr__l,.hdr__r{display:flex;align-items:center}
 .hdr__l{gap:calc(60*var(--u))}

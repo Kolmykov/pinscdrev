@@ -133,11 +133,13 @@
   /* ---------- шапка ---------- */
   function header() {
     var h = $("#hdr"); if (!h) return;
-    var ticking = false;
+    var last = window.scrollY, ticking = false;
     var on = function () {
       var y = window.scrollY;
       h.classList.toggle("solid", y > 60);
-      ticking = false;
+      if (y > 60 && y < last - 4) h.classList.add("hide");          // вверх: шапка прячется
+      else if (y > last + 4 || y <= 60) h.classList.remove("hide"); // вниз: показывается
+      last = y; ticking = false;
     };
     on(); window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(on); } }, { passive: true });
   }
