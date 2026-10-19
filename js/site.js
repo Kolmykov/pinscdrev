@@ -26,7 +26,7 @@
     set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   };
   var cart = store.get("pd_cart", []);
-  var favs = store.get("pd_fav", []);
+  var favs = store.get("pd_fav", []).filter(function (id, i, a) { return byId[id] && a.indexOf(id) === i; }); store.set("pd_fav", favs);
   var saveCart = function () { store.set("pd_cart", cart); badge(); };
   var qtyTotal = function () { return cart.reduce(function (s, i) { return s + i.qty; }, 0); };
   function badge() {
@@ -250,7 +250,7 @@
 
     catalog.render = function () {
       var list = P.filter(function (p) {
-        if (p.hidden) return false;
+        if (p.hidden && !st.fav) return false;
         if (st.fav && favs.indexOf(p.id) === -1) return false;
         if (st.cat !== "all" && p.cats.indexOf(st.cat) === -1) return false;
         if (st.woods.length && st.woods.indexOf(p.wood) === -1) return false;
