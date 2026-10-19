@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Каталог — Пинскдрев</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.classList.add('js');
+/* макет рассчитан на 1440: на более узком окне все размеры масштабируются через --u */
+(function(){var d=document.documentElement;function f(){var w=d.clientWidth;d.style.setProperty('--u',(w<1440?w/1440:1)+'px')}f();addEventListener('resize',f)})();</script>
+</head><body class="inner">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5 4.2 12.8a4.9 4.9 0 0 1 6.9-7L12 6.7l.9-.9a4.9 4.9 0 0 1 6.9 7z"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M2.5 3.5h3l2.3 11.2h10.4l2.3-8.2H6.2"/><circle cx="9.3" cy="19.2" r="1.5"/><circle cx="17" cy="19.2" r="1.5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 10 10"><path d="M0 5h9M5 1l4 4-4 4"/></symbol>
+<symbol id="i-plus" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12"/></symbol>
+<symbol id="i-minus" viewBox="0 0 16 16"><path d="M3 8h10"/></symbol>
+<symbol id="i-plus16" viewBox="0 0 16 16"><path d="M8 3v10M3 8h10"/></symbol>
+<symbol id="i-check" viewBox="0 0 14 14"><path d="M2 7.5 5.5 11 12 3.5"/></symbol>
+<symbol id="i-chev" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+<symbol id="i-x14" viewBox="0 0 14 14"><path d="M0 0 14 14M14 0 0 14"/></symbol>
+<symbol id="i-ne" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></symbol>
+</defs></svg><header class="hdr" id="hdr"><div class="w hdr__row">
+  <div class="hdr__l"><a class="hdr__logo" href="index.html">Пинскдрев</a>
+    <nav class="hdr__nav"><a href="catalog.html">Каталог</a><a href="index.html#rooms">Комнаты</a><a href="index.html#kits">Коллекции</a><a href="catalog.html?tab=sale">Акции</a><a href="index.html#shop">Где купить</a></nav></div>
+  <div class="hdr__r"><a class="btn btn--line" href="index.html#shop">Заказать звонок</a>
+    <div class="hdr__icons"><a href="#" aria-label="Профиль"><svg class="i"><use href="#i-user"/></svg></a><a href="catalog.html?tab=fav" aria-label="Избранное"><svg class="i"><use href="#i-heart"/></svg><span class="badge" id="favBadge">0</span></a><a href="cart.html" aria-label="Корзина"><svg class="i"><use href="#i-cart"/></svg><span class="badge" id="badge">0</span></a></div></div>
+</div></header>
+<main>
+<section><div class="w"><div class="sec-row"><span>Каталог</span><span class="crumbs"><a href="index.html">Главная</a>  /  Каталог</span></div>
+  <div class="page-head"><h1 class="h64">Мебель из массива <em>дерева</em></h1><div class="tabs" role="tablist" id="ctabs"><button class="tab" role="tab" aria-selected="true" data-tab="all">Все</button><button class="tab" role="tab" aria-selected="false" data-tab="spalni">Спальни</button><button class="tab" role="tab" aria-selected="false" data-tab="gostinye">Гостиные</button><button class="tab" role="tab" aria-selected="false" data-tab="kabinety">Кабинеты</button><button class="tab" role="tab" aria-selected="false" data-tab="detskie">Детские</button><button class="tab" role="tab" aria-selected="false" data-tab="prihozhie">Прихожие</button><button class="tab" role="tab" aria-selected="false" data-tab="kuhni">Кухни и столовые</button><button class="tab" role="tab" aria-selected="false" data-tab="dacha">Дача</button></div></div>
+  <div class="cbody">
+    <aside class="cf" id="filters">
+      <div class="fg"><h4>Порода дерева</h4><ul><li><label class="fi"><input type="checkbox" name="wood" value="Дуб"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">Дуб</span><small>18</small></label></li><li><label class="fi"><input type="checkbox" name="wood" value="Бук"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">Бук</span><small>9</small></label></li><li><label class="fi"><input type="checkbox" name="wood" value="Берёза"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">Берёза</span><small>7</small></label></li><li><label class="fi"><input type="checkbox" name="wood" value="Ольха"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">Ольха</span><small>5</small></label></li><li><label class="fi"><input type="checkbox" name="wood" value="Сосна"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">Сосна</span><small>3</small></label></li></ul></div>
+      <div class="fg"><h4>Цена, ₽</h4><div class="prange"><input id="pmin" inputmode="numeric" value="12 900" aria-label="Цена от"><span>—</span><input id="pmax" inputmode="numeric" value="248 000" aria-label="Цена до"></div>
+        <div class="slider" id="slider"><i class="slider__t"></i><i class="slider__r" id="sr"></i><button class="slider__h" id="sh1" aria-label="Минимальная цена"></button><button class="slider__h" id="sh2" aria-label="Максимальная цена"></button></div></div>
+      <div class="fg"><h4>Размер спального места</h4><ul><li><label class="fi"><input type="checkbox" name="size" value="90×200"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">90 × 200</span><small>5</small></label></li><li><label class="fi"><input type="checkbox" name="size" value="140×200"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">140 × 200</span><small>12</small></label></li><li><label class="fi"><input type="checkbox" name="size" value="160×200"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">160 × 200</span><small>16</small></label></li><li><label class="fi"><input type="checkbox" name="size" value="180×200"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">180 × 200</span><small>9</small></label></li></ul></div>
+      <div class="fg"><h4>Особенности</h4><ul><li><label class="fi"><input type="checkbox" name="feat" value="lift"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">С подъёмным механизмом</span><small>11</small></label></li><li><label class="fi"><input type="checkbox" name="feat" value="drawers"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">С ящиками</span><small>8</small></label></li><li><label class="fi"><input type="checkbox" name="feat" value="soft"><span class="bx"><svg class="i"><use href="#i-check"/></svg></span><span class="lbl">Мягкое изголовье</span><small>7</small></label></li></ul></div>
+      <div class="fg fg--sw"><span>Только в наличии</span><button class="sw" id="stock" aria-pressed="false" aria-label="Только в наличии"></button></div>
+      <button class="btn btn--line btn--full" id="reset">Сбросить фильтры</button>
+    </aside>
+    <div class="cmain"><div class="cbar"><span id="cnt">6 из 42 моделей</span><label class="sort"><small>Сортировка:</small><select id="sort"><option value="pop">Сначала популярные</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select><svg class="i"><use href="#i-chev"/></svg></label></div>
+      <div class="grid3 grid3--c" id="cgrid"></div><div class="empty-f" id="cempty">По этим условиям моделей нет. Попробуйте сбросить фильтры.</div>
+      <div class="cpager"><span id="cpg">Показано 6 из 42</span><button class="btn btn--line" id="more">Показать ещё</button></div></div>
+  </div></div></section>
+<section class="band cbanner"><div class="w"><div class="cbanner__t"><h2>Нужен другой размер или отделка?</h2><p>Изготовим мебель по вашим размерам из выбранной породы дерева. Срок от 14 дней, замер и доставка включены.</p><a class="btn btn--fill" href="index.html#shop">Рассчитать на заказ</a></div><div class="cbanner__img ph-img"><img src="img/hero.jpg" alt=""></div></div></section>
+</main>
+<footer class="ftr" id="footer"><div class="w">
+  <div class="ftr__cols">
+    <div class="ftr__about"><p>Мебель из массива дерева. Беларусь и Европа.</p><b>Пинскдрев</b>
+      <form class="ftr__form" onsubmit="return false"><input type="email" placeholder="Почта для новостей и акций" aria-label="Почта"><button aria-label="Подписаться"><svg class="i"><use href="#i-arrow"/></svg></button></form></div>
+    <div><h4>Покупателям</h4><ul><li><a href="#">Доставка</a></li><li><a href="#">Оплата</a></li><li><a href="#">Рассрочка</a></li><li><a href="#">Сборка</a></li><li><a href="#">Опт и дизайнерам</a></li></ul></div>
+    <div><h4>О компании</h4><ul><li><a href="#">Контакты</a></li><li><a href="#">Блог</a></li><li><a href="#">Отзывы</a></li><li><a href="#">Производители</a></li><li><a href="index.html#about">О нас</a></li></ul></div>
+    <div><h4>Контакты</h4><ul><li><a href="#">Написать директору</a></li><li><a href="#">Telegram · WhatsApp</a></li><li><a href="mailto:mebel@pandrev.ru">mebel@pandrev.ru</a></li><li><a href="tel:88005501420">8 800 550-14-20</a></li></ul></div>
+  </div>
+  <div class="ftr__legal"><p>Информация на сайте носит ознакомительный характер и не является публичной офертой. Цвета на фото могут отличаться от натуральных.</p><p>© 2012–2026 Пинскдрев · Политика конфиденциальности</p></div>
+</div><div class="bigword" aria-hidden="true">Пинскдрев</div></footer>
+<div class="mini" id="mini" aria-hidden="true"><div class="mini__scrim" data-close></div>
+<aside class="mini__panel" role="dialog" aria-label="Товар добавлен в корзину">
+  <button class="mini__x" data-close aria-label="Закрыть"><svg class="i"><use href="#i-x14"/></svg></button>
+  <h3>Товар добавлен в корзину</h3>
+  <div class="mini__item" id="miniItem"></div>
+  <div class="mini__tot"><span id="miniCount">В корзине 1 товар</span><b id="miniSum">0 ₽</b></div>
+  <div class="mini__btns"><a class="btn btn--fill btn--full" href="cart.html">Перейти в корзину</a><button class="btn btn--line btn--full" data-close>Продолжить покупки</button></div>
+  <p class="mini__note">Сборку и доставку можно выбрать в корзине.</p>
+</aside></div>
+<script src="js/site.js"></script>
+</body></html>
