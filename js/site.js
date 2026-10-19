@@ -145,6 +145,42 @@
     on(); window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(on); } }, { passive: true });
   }
 
+  /* ---------- переходы к разделам: мягкая прокрутка, дальние прыжки через плавное затемнение ---------- */
+  function anchors() {
+    var veil = document.createElement("div"); veil.className = "veil"; document.body.appendChild(veil);
+    var raf = 0, busy = false;
+    var ease = function (k) { return k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; };
+    var stop = function () { cancelAnimationFrame(raf); busy = false; };
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { window.addEventListener(ev, stop, { passive: true }); });
+    function glide(to) {
+      var from = window.scrollY, d = to - from; if (Math.abs(d) < 2) return;
+      var dur = Math.min(1500, 650 + Math.abs(d) * .35), t0 = performance.now(); busy = true;
+      (function step(now) {
+        if (!busy) return;
+        var k = Math.min(1, (now - t0) / dur); window.scrollTo(0, from + d * ease(k));
+        if (k < 1) raf = requestAnimationFrame(step); else busy = false;
+      })(t0);
+    }
+    function go(to) {
+      var max = document.documentElement.scrollHeight - window.innerHeight; to = Math.max(0, Math.min(to, max));
+      if (window.matchMedia("(prefers-reduced-motion:reduce)").matches) { window.scrollTo(0, to); return; }
+      if (Math.abs(to - window.scrollY) > window.innerHeight * 2.2) {
+        veil.classList.add("on");
+        setTimeout(function () { window.scrollTo(0, to); veil.classList.remove("on"); }, 320);
+      } else glide(to);
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[href]"); if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      var u; try { u = new URL(a.href, location.href); } catch (x) { return; }
+      var raw = a.getAttribute("href");
+      if (raw === "#") { e.preventDefault(); return; }
+      if (u.origin !== location.origin || u.pathname !== location.pathname || !u.hash || u.hash.length < 2) return;
+      var el = document.getElementById(decodeURIComponent(u.hash.slice(1))); if (!el) return;
+      e.preventDefault(); history.pushState(null, "", u.hash);
+      go(el.getBoundingClientRect().top + window.scrollY);
+    });
+  }
+
   /* ---------- неразрывные пробелы (никаких висячих предлогов) ---------- */
   function typo(root) {
     var re = /(?<=(?:^|[\s«(])(?:[авикосуя]|на|по|за|из|от|до|об|во|со|не|но|ни|же|бы|для|без|при|над|под|или|что|как|это|все|его|её|их))\s+/gi;
@@ -314,7 +350,7 @@
   }
 
   /* ---------- запуск ---------- */
-  header(); badge(); favBadge();
+  header(); anchors(); badge(); favBadge();
   home(); catalogPage(); cartPageInit();
   reveal(document); counters();
   typo(document.body);

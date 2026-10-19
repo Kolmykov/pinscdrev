@@ -7,7 +7,7 @@
   --side:60px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);font-size:16px;font-weight:400;line-height:1.375;color:var(--ink);background:#fff;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -427,6 +427,11 @@ main{display:flex;flex-direction:column;gap:60px}
 .mini__note{font-size:14px;line-height:19px;color:var(--brown);margin-top:-1px}
 
 /* ===== появление при прокрутке ===== */
+.veil{position:fixed;inset:0;z-index:90;background:var(--ivory);opacity:0;pointer-events:none;transition:opacity .32s ease}
+.veil.on{opacity:1;pointer-events:auto}
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.3s;animation-timing-function:cubic-bezier(.22,1,.36,1)}
+.hdr{view-transition-name:hdr}
 .js .rv{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 .js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}
