@@ -138,8 +138,8 @@
       var y = window.scrollY;
       var solid = y > 60;
       h.classList.toggle("solid", solid);
-      if (y > 60 && y < last - 1) h.classList.add("hide");          // вверх: шапка прячется
-      else if (y > last + 4 || y <= 60) h.classList.remove("hide"); // вниз: показывается
+      if (y > 140 && y > last + 4) h.classList.add("hide");         // вниз: шапка прячется
+      else if (y < last - 1 || y <= 60) h.classList.remove("hide"); // вверх: возвращается
       last = y; ticking = false;
     };
     on(); window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(on); } }, { passive: true });
