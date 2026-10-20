@@ -281,7 +281,7 @@ main{display:flex;flex-direction:column;gap:calc(60*var(--u))}
 .ftr__legal{display:flex;justify-content:space-between;gap:calc(40*var(--u));margin-top:calc(46*var(--u));font-size:calc(14*var(--u));line-height:calc(19*var(--u));color:var(--foot)}
 .ftr__legal p:first-child{max-width:calc(640*var(--u))}
 .ftr__legal p:last-child{text-align:right}
-.bigword{position:absolute;left:calc(42*var(--u));top:calc(402*var(--u));font-size:calc(264*var(--u));font-weight:300;line-height:calc(190*var(--u));color:rgba(255,255,255,.16);white-space:nowrap;user-select:none}
+.bigword{position:absolute;left:calc(50% - calc(720*var(--u)) + calc(42*var(--u)));top:calc(402*var(--u));font-size:calc(264*var(--u));font-weight:300;line-height:calc(190*var(--u));color:rgba(255,255,255,.16);white-space:nowrap;user-select:none}
 
 /* ===== каталог (страница) ===== */
 .crumbs{font-size:calc(14*var(--u));font-weight:400;line-height:calc(19*var(--u));white-space:pre;color:var(--brown)}

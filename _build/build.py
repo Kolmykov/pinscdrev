@@ -84,7 +84,7 @@ FOOTER = '''<footer class="ftr" id="footer"><div class="w">
 
 ZOOM = """<script>document.documentElement.classList.add('js');
 /* макет рассчитан на 1440: на более узком окне все размеры масштабируются через --u */
-(function(){var d=document.documentElement;function f(){var w=d.clientWidth;d.style.setProperty('--u',(w<1440?w/1440:1)+'px')}f();addEventListener('resize',f)})();</script>"""
+(function(){var d=document.documentElement;function f(){var w=d.clientWidth;d.style.setProperty('--u',(Math.min(w,1920)/1440)+'px')}f();addEventListener('resize',f)})();</script>"""
 ZOOM_BODY = ""
 
 def head(title, cls=''):
