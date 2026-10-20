@@ -136,7 +136,7 @@ main{display:flex;flex-direction:column;gap:calc(60*var(--u))}
 /* ===== фото-блоки (выбор недели, комплекты) ===== */
 .fsec{position:relative}
 .fsec__band{position:absolute;left:0;right:0;top:0;height:calc(300*var(--u));background-size:cover;background-position:center}
-.fsec__band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.18),rgba(0,0,0,0))}
+.fsec__band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,5,.6) 0%,rgba(20,10,5,.32) 38%,rgba(20,10,5,.74) 100%)}
 .fsec .w{height:100%}
 .fsec .sec-row{position:absolute;left:0;right:0;top:calc(60*var(--u));color:#fff}
 .fsec__title{position:absolute;left:0;top:calc(212*var(--u));font-size:calc(64*var(--u));font-weight:300;line-height:calc(46*var(--u));color:#fff;white-space:nowrap}

@@ -136,7 +136,7 @@ main{display:flex;flex-direction:column;gap:60px}
 /* ===== фото-блоки (выбор недели, комплекты) ===== */
 .fsec{position:relative}
 .fsec__band{position:absolute;left:0;right:0;top:0;height:300px;background-size:cover;background-position:center}
-.fsec__band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.18),rgba(0,0,0,0))}
+.fsec__band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,5,.6) 0%,rgba(20,10,5,.32) 38%,rgba(20,10,5,.74) 100%)}
 .fsec .w{height:100%}
 .fsec .sec-row{position:absolute;left:0;right:0;top:60px;color:#fff}
 .fsec__title{position:absolute;left:0;top:212px;font-size:64px;font-weight:300;line-height:46px;color:#fff;white-space:nowrap}
