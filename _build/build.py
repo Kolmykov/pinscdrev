@@ -19,7 +19,8 @@ SPRITE = '''<svg width="0" height="0" style="position:absolute" aria-hidden="tru
 </defs></svg>'''
 
 def ic(name, cls='', size=None):
-    c = 'i' + (' ' + cls if cls else '')
+    cls = (cls + ' ' if cls else '') + {'arrow': 'i--r', 'ne': 'i--d'}.get(name, '')
+    c = 'i' + (' ' + cls.strip() if cls.strip() else '')
     return f'<svg class="{c}"><use href="#i-{name}"/></svg>'
 
 def header(hero):
@@ -36,7 +37,7 @@ def header(hero):
 FOOTER = '''<footer class="ftr" id="footer"><div class="w">
   <div class="ftr__cols">
     <div class="ftr__about"><p>Мебель из массива дерева. Беларусь и Европа.</p><b>Пинскдрев</b>
-      <form class="ftr__form" onsubmit="return false"><input type="email" placeholder="Почта для новостей и акций" aria-label="Почта"><button aria-label="Подписаться"><svg class="i"><use href="#i-arrow"/></svg></button></form></div>
+      <form class="ftr__form" onsubmit="return false"><input type="email" placeholder="Почта для новостей и акций" aria-label="Почта"><button aria-label="Подписаться"><svg class="i i--r"><use href="#i-arrow"/></svg></button></form></div>
     <div><h4>Покупателям</h4><ul><li><a href="#">Доставка</a></li><li><a href="#">Оплата</a></li><li><a href="#">Рассрочка</a></li><li><a href="#">Сборка</a></li><li><a href="#">Опт и дизайнерам</a></li></ul></div>
     <div><h4>О компании</h4><ul><li><a href="#">Контакты</a></li><li><a href="#">Блог</a></li><li><a href="#">Отзывы</a></li><li><a href="#">Производители</a></li><li><a href="index.html#about">О нас</a></li></ul></div>
     <div><h4>Контакты</h4><ul><li><a href="#">Написать директору</a></li><li><a href="#">Telegram · WhatsApp</a></li><li><a href="mailto:mebel@pandrev.ru">mebel@pandrev.ru</a></li><li><a href="tel:88005501420">8 800 550-14-20</a></li></ul></div>
@@ -55,7 +56,8 @@ MINI = '''<div class="mini" id="mini" aria-hidden="true"><div class="mini__scrim
 </aside></div>'''
 
 def ic(name, cls='', size=None):
-    c = 'i' + (' ' + cls if cls else '')
+    cls = (cls + ' ' if cls else '') + {'arrow': 'i--r', 'ne': 'i--d'}.get(name, '')
+    c = 'i' + (' ' + cls.strip() if cls.strip() else '')
     return f'<svg class="{c}"><use href="#i-{name}"/></svg>'
 
 def header(hero):
@@ -72,7 +74,7 @@ def header(hero):
 FOOTER = '''<footer class="ftr" id="footer"><div class="w">
   <div class="ftr__cols">
     <div class="ftr__about"><p>Мебель из массива дерева. Беларусь и Европа.</p><b>Пинскдрев</b>
-      <form class="ftr__form" onsubmit="return false"><input type="email" placeholder="Почта для новостей и акций" aria-label="Почта"><button aria-label="Подписаться"><svg class="i"><use href="#i-arrow"/></svg></button></form></div>
+      <form class="ftr__form" onsubmit="return false"><input type="email" placeholder="Почта для новостей и акций" aria-label="Почта"><button aria-label="Подписаться"><svg class="i i--r"><use href="#i-arrow"/></svg></button></form></div>
     <div><h4>Покупателям</h4><ul><li><a href="#">Доставка</a></li><li><a href="#">Оплата</a></li><li><a href="#">Рассрочка</a></li><li><a href="#">Сборка</a></li><li><a href="#">Опт и дизайнерам</a></li></ul></div>
     <div><h4>О компании</h4><ul><li><a href="#">Контакты</a></li><li><a href="#">Блог</a></li><li><a href="#">Отзывы</a></li><li><a href="#">Производители</a></li><li><a href="index.html#about">О нас</a></li></ul></div>
     <div><h4>Контакты</h4><ul><li><a href="#">Написать директору</a></li><li><a href="#">Telegram · WhatsApp</a></li><li><a href="mailto:mebel@pandrev.ru">mebel@pandrev.ru</a></li><li><a href="tel:88005501420">8 800 550-14-20</a></li></ul></div>
